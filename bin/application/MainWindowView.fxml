@@ -234,8 +234,8 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button fx:id="applyButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="25.0" prefWidth="190.0" text="Apply" />
-                  <Button fx:id="clearButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="25.0" prefWidth="205.0" text="Clear" GridPane.columnIndex="1" />
+                  <Button fx:id="applyButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#inference" prefHeight="25.0" prefWidth="190.0" text="Apply" />
+                  <Button fx:id="clearButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clear" prefHeight="25.0" prefWidth="205.0" text="Clear" GridPane.columnIndex="1" />
                </children>
             </GridPane>
          </children>

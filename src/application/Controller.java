@@ -55,8 +55,14 @@ public class Controller {
     @FXML
     private TextArea topTenTextArea;
 
-    @FXML public void prueba(){
-    	topTenTextArea.appendText("Esto es una prueba\n");
+    @FXML
+    public void inference(){
+    	topTenTextArea.setText("Prueba");
+    }
+
+    @FXML
+    public void clear(){
+    	topTenTextArea.setText("");
     }
 
     public void initialize() {
