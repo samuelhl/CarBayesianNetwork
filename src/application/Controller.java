@@ -3,10 +3,12 @@ package application;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import model.BayesianNetwork;
 
 
 public class Controller {
-	//private BayesianNetwork network;
+	private BayesianNetwork network;
+
 	String prices[] = {"", "s01_below_10000", "s02_10000_20000", "s03_20000_30000", "s04_30000_40000", "s05_40000_50000", "s06_50000_60000", "s07_60000_70000", "s08_70000_80000"};
 	String years[] = {"", "s1_below_2005", "s2_2005_2009", "s3_2009_2013", "s4_2013_up"};
 	String sizes[] = {"", "Compact", "Large", "Midsize"};
@@ -21,7 +23,6 @@ public class Controller {
 	String engineCylinders[] = {"", "s1_below_2", "s2_2_4", "s3_4_6", "s4_6_8"};
 	String highwayL100km[] = {"", "s1_below_10", "s2_10_15", "s3_15_20", "s4_20_25", "s6_30_up"};
 	String makes[] = {"", "Alfa_Romeo", "Audi", "BMW", "Cadillac", "Chevrolet", "Chrysler", "Dodge", "FIAT", "GMC", "Honda", "HUMMER", "Hyundai", "Infiniti", "Kia", "Land_Rover", "Lexus", "Lincoln", "Lotus", "Maserati", "Mazda", "MercedesBenz", "Mitsubishi", "Nisssan", "Plymouth", "Pontiac", "Porsche", "Saab", "Subaru", "Suzuki", "Toyota", "Volkswagen", "Volvo"};
-
 
     @FXML
     private ChoiceBox<String> makeChoiceBox;
@@ -121,5 +122,103 @@ public class Controller {
         engineCylindersChoiceBox.setItems(FXCollections.observableArrayList(engineCylinders));
         engineCylindersChoiceBox.getSelectionModel().selectFirst();
         engineCylindersChoiceBox.setTooltip(new Tooltip("Select an engine cylinder interval"));
+    }
+
+    private void setMake(){
+        String evidence=makeChoiceBox.getSelectionModel().getSelectedItem();
+        if(!evidence.equals("")){
+            network.setEvidence("make",evidence);
+        }
+    }
+
+    private void setPrice(){
+        String evidence=priceChoiceBox.getSelectionModel().getSelectedItem();
+        if(!evidence.equals("")){
+            network.setEvidence("price",evidence);
+        }
+    }
+
+    private void setYear(){
+        String evidence=yearChoiceBox.getSelectionModel().getSelectedItem();
+        if(!evidence.equals("")){
+            network.setEvidence("year",evidence);
+        }
+    }
+
+    private void setPopularity(){
+        String evidence=popularityChoiceBox.getSelectionModel().getSelectedItem();
+        if(!evidence.equals("")){
+            network.setEvidence("popularity",evidence);
+        }
+    }
+
+    private void setVehicleSize(){
+        String evidence=vehicleSizeChoiceBox.getSelectionModel().getSelectedItem();
+        if(!evidence.equals("")){
+            network.setEvidence("vehicleSize",evidence);
+        }
+    }
+
+    private void setVehicleStyle(){
+        String evidence=vehicleStyleChoiceBox.getSelectionModel().getSelectedItem();
+        if(!evidence.equals("")){
+            network.setEvidence("vehicleStyle",evidence);
+        }
+    }
+
+    private void setDrivenWheels(){
+        String evidence=drivenWheelsChoiceBox.getSelectionModel().getSelectedItem();
+        if(!evidence.equals("")){
+            network.setEvidence("drivenWheels",evidence);
+        }
+    }
+
+    private void setNumberDoors(){
+        String evidence=numberDoorsChoiceBox.getSelectionModel().getSelectedItem();
+        if(!evidence.equals("")){
+            network.setEvidence("make",evidence);
+        }
+    }
+
+    private void setTransmission(){
+        String evidence=transmissionChoiceBox.getSelectionModel().getSelectedItem();
+        if(!evidence.equals("")){
+            network.setEvidence("transmission",evidence);
+        }
+    }
+
+    private void setCity(){
+        String evidence=cityChoiceBox.getSelectionModel().getSelectedItem();
+        if(!evidence.equals("")){
+            network.setEvidence("city",evidence);
+        }
+    }
+
+    private void setHighway(){
+        String evidence=highwayChoiceBox.getSelectionModel().getSelectedItem();
+        if(!evidence.equals("")){
+            network.setEvidence("highway",evidence);
+        }
+    }
+
+    private void setEngineHP(){
+        String evidence=engineHPChoiceBox.getSelectionModel().getSelectedItem();
+        if(!evidence.equals("")){
+            network.setEvidence("engineHP",evidence);
+        }
+    }
+
+    private void setEngineFuel(){
+        String evidence=engineFuelChoiceBox.getSelectionModel().getSelectedItem();
+        if(!evidence.equals("")){
+            network.setEvidence("engineFuel",evidence);
+        }
+    }
+
+    private void setEngineCylinders(){
+        String evidence=engineCylindersChoiceBox.getSelectionModel().getSelectedItem();
+        if(!evidence.equals("")){
+            network.setEvidence("engineCylinders",evidence);
+        }
     }
 }
