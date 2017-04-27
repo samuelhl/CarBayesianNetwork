@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <children>
-      <GridPane hgap="5.0" prefHeight="453.0" prefWidth="604.0" vgap="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <GridPane hgap="5.0" prefHeight="453.0" prefWidth="604.0" vgap="5.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
         <columnConstraints>
           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -40,7 +42,7 @@
               </rowConstraints>
                <children>
                   <Label text="Make:" />
-                  <ChoiceBox fx:id="makeChoiceBox" prefHeight="25.0" prefWidth="166.0" GridPane.columnIndex="1" />
+                  <ChoiceBox fx:id="makeChoiceBox" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="166.0" GridPane.columnIndex="1" />
                </children>
             </GridPane>
             <Label text="Evidences:">
@@ -48,7 +50,7 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="14" />
+            <TextArea fx:id="topTenTextArea" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="13" />
             <Label text="Top 10:" GridPane.columnIndex="1">
                <font>
                   <Font name="System Bold" size="18.0" />
@@ -64,7 +66,7 @@
                </rowConstraints>
                <children>
                   <Label text="Price" />
-                  <ChoiceBox fx:id="priceChoiceBox" prefHeight="25.0" prefWidth="166.0" GridPane.columnIndex="1" />
+                  <ChoiceBox fx:id="priceChoiceBox" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="166.0" GridPane.columnIndex="1" />
                </children>
             </GridPane>
             <GridPane GridPane.rowIndex="3">
@@ -77,7 +79,7 @@
                </rowConstraints>
                <children>
                   <Label text="Year:" />
-                  <ChoiceBox fx:id="yearChoiceBox" prefHeight="25.0" prefWidth="166.0" GridPane.columnIndex="1" />
+                  <ChoiceBox fx:id="yearChoiceBox" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="166.0" GridPane.columnIndex="1" />
                </children>
             </GridPane>
             <GridPane GridPane.rowIndex="4">
@@ -90,7 +92,7 @@
                </rowConstraints>
                <children>
                   <Label text="Popularity:" />
-                  <ChoiceBox fx:id="populatiryChoiceBox" prefHeight="25.0" prefWidth="166.0" GridPane.columnIndex="1" />
+                  <ChoiceBox fx:id="popularityChoiceBox" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="166.0" GridPane.columnIndex="1" />
                </children>
             </GridPane>
             <GridPane GridPane.rowIndex="5">
@@ -103,7 +105,7 @@
                </rowConstraints>
                <children>
                   <Label text="Vehicle Size:" />
-                  <ChoiceBox fx:id="vehicleSizeChoiceBox" prefHeight="25.0" prefWidth="166.0" GridPane.columnIndex="1" />
+                  <ChoiceBox fx:id="vehicleSizeChoiceBox" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="166.0" GridPane.columnIndex="1" />
                </children>
             </GridPane>
             <GridPane GridPane.rowIndex="6">
@@ -116,7 +118,7 @@
                </rowConstraints>
                <children>
                   <Label text="Vehicle Style:" />
-                  <ChoiceBox fx:id="vehicleStyleChoiceBox" prefHeight="25.0" prefWidth="166.0" GridPane.columnIndex="1" />
+                  <ChoiceBox fx:id="vehicleStyleChoiceBox" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="166.0" GridPane.columnIndex="1" />
                </children>
             </GridPane>
             <GridPane GridPane.rowIndex="7">
@@ -129,7 +131,7 @@
                </rowConstraints>
                <children>
                   <Label text="Driven wheels:" />
-                  <ChoiceBox fx:id="drivenWheelsChoiceBox" prefHeight="25.0" prefWidth="166.0" GridPane.columnIndex="1" />
+                  <ChoiceBox fx:id="drivenWheelsChoiceBox" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="166.0" GridPane.columnIndex="1" />
                </children>
             </GridPane>
             <GridPane GridPane.rowIndex="8">
@@ -142,7 +144,7 @@
                </rowConstraints>
                <children>
                   <Label text="Number of doors:" />
-                  <ChoiceBox fx:id="numberDoorsChoiceBox" prefHeight="25.0" prefWidth="166.0" GridPane.columnIndex="1" />
+                  <ChoiceBox fx:id="numberDoorsChoiceBox" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="166.0" GridPane.columnIndex="1" />
                </children>
             </GridPane>
             <GridPane GridPane.rowIndex="9">
@@ -155,7 +157,7 @@
                </rowConstraints>
                <children>
                   <Label text="Transmission type:" />
-                  <ChoiceBox fx:id="transmissionChoiceBox" prefHeight="25.0" prefWidth="166.0" GridPane.columnIndex="1" />
+                  <ChoiceBox fx:id="transmissionChoiceBox" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="166.0" GridPane.columnIndex="1" />
                </children>
             </GridPane>
             <GridPane GridPane.rowIndex="10">
@@ -168,7 +170,7 @@
                </rowConstraints>
                <children>
                   <Label text="City L/100Km:" />
-                  <ChoiceBox fx:id="cityChoiceBox" prefHeight="25.0" prefWidth="166.0" GridPane.columnIndex="1" />
+                  <ChoiceBox fx:id="cityChoiceBox" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="166.0" GridPane.columnIndex="1" />
                </children>
             </GridPane>
             <GridPane GridPane.rowIndex="11">
@@ -181,7 +183,7 @@
                </rowConstraints>
                <children>
                   <Label text="Highway L/100Km:" />
-                  <ChoiceBox fx:id="highwayChoiceBox" prefHeight="25.0" prefWidth="166.0" GridPane.columnIndex="1" />
+                  <ChoiceBox fx:id="highwayChoiceBox" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="166.0" GridPane.columnIndex="1" />
                </children>
             </GridPane>
             <GridPane GridPane.rowIndex="12">
@@ -194,7 +196,7 @@
                </rowConstraints>
                <children>
                   <Label text="Engine HP:" />
-                  <ChoiceBox fx:id="engineHPChoiceBox" prefHeight="25.0" prefWidth="166.0" GridPane.columnIndex="1" />
+                  <ChoiceBox fx:id="engineHPChoiceBox" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="166.0" GridPane.columnIndex="1" />
                </children>
             </GridPane>
             <GridPane GridPane.rowIndex="13">
@@ -207,7 +209,7 @@
                </rowConstraints>
                <children>
                   <Label text="Engine fuel type:" />
-                  <ChoiceBox fx:id="engineFuelChoiceBox" prefHeight="25.0" prefWidth="166.0" GridPane.columnIndex="1" />
+                  <ChoiceBox fx:id="engineFuelChoiceBox" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="166.0" GridPane.columnIndex="1" />
                </children>
             </GridPane>
             <GridPane GridPane.rowIndex="14">
@@ -220,10 +222,26 @@
                </rowConstraints>
                <children>
                   <Label text="Engine cylinders:" />
-                  <ChoiceBox fx:id="engineCyliundersChoiceBox" prefHeight="25.0" prefWidth="166.0" GridPane.columnIndex="1" />
+                  <ChoiceBox fx:id="engineCylindersChoiceBox" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="166.0" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+            <GridPane hgap="5.0" vgap="5.0" GridPane.columnIndex="1" GridPane.rowIndex="14">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="applyButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="25.0" prefWidth="190.0" text="Apply" />
+                  <Button fx:id="clearButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="25.0" prefWidth="205.0" text="Clear" GridPane.columnIndex="1" />
                </children>
             </GridPane>
          </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
       </GridPane>
    </children>
 </AnchorPane>
