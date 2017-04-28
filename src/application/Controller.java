@@ -81,7 +81,7 @@ public class Controller {
     	String results = "";
     	for (int i = 0; i < top10.size(); i++) {
     		Car car = top10.get(i);
-    		results += (i + 1) + ".\t" + car.getModel() + " -> " + (car.getProb() * 100) + "%\n";
+    		results += (i + 1) + ".\t" + car.getMake() + " " + car.getModel() + " -> " + (car.getProb() * 100) + "%\n";
     	}
     	topTenTextArea.setText(results);
     }
