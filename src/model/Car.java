@@ -1,5 +1,8 @@
 package model;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class Car implements Comparable<Car> {
 	private String model;
 	private String make;
@@ -8,7 +11,15 @@ public class Car implements Comparable<Car> {
 	public Car(String model, String make, double prob) {
 		this.model = model;
 		this.make = make;
-		this.prob = prob;
+		this.prob = round(prob, 2);
+	}
+
+	public static double round(double value, int places) {
+	    if (places < 0) throw new IllegalArgumentException();
+
+	    BigDecimal bd = new BigDecimal(value);
+	    bd = bd.setScale(places, RoundingMode.HALF_UP);
+	    return bd.doubleValue();
 	}
 
 	public int compareTo(Car car) {

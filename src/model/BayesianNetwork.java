@@ -6,6 +6,7 @@ import java.util.List;
 
 import smile.Network;
 
+
 public class BayesianNetwork {
 	private Network net;
 
@@ -18,7 +19,7 @@ public class BayesianNetwork {
 		this.net.setEvidence(node, evidence);
 	}
 
-	public List<Car> getTop10() {
+	public ArrayList<Car> getTop10() {
 		double[] modelProbs = this.net.getNodeValue("Model");
 		String[] modelNames = this.net.getOutcomeIds("Model");
 		List<Car> cars = new ArrayList<Car>();
@@ -28,11 +29,15 @@ public class BayesianNetwork {
 		}
 		Collections.sort(cars);
 
-		return cars.subList(0, 10);
+		return new ArrayList<Car>(cars.subList(0, 10));
 	}
 
 	public void updateBeliefs() {
 		this.net.updateBeliefs();
+	}
+
+	public void clearAllEvidence() {
+		this.net.clearAllEvidence();
 	}
 
 }
